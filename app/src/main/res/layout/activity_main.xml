@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="60"
-        android:textColor="#FFFFFF"
+        android:textColor="#4DFFFFFF"
         android:textSize="96sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,12 +25,12 @@
         android:id="@+id/bStart"
         android:layout_width="114dp"
         android:layout_height="56dp"
-
-        android:backgroundTint="#404040"
+        android:backgroundTint="#4D404040"
         android:text="START"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTimer" />
 
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="5"
         android:visibility="invisible"
-        android:textColor="#FFFFFF"
+        android:textColor="#4DFFFFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/bStart"
         app:layout_constraintEnd_toEndOf="parent"
