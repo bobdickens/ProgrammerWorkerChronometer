@@ -1,5 +1,6 @@
 package com.imladris.programmerworkerchronometer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.apply {
+            settingButton.setOnClickListener { openSettingsActivity() }
+        }
 
 
         binding.apply {
@@ -54,19 +59,18 @@ class MainActivity : AppCompatActivity() {
                        var timeMin = timeM/1000
                        binding.textrelax.text = timeMin.toString()
                    }
-
                    override fun onFinish() {
                        binding.textrelax.text = "Finish"
-
-
-
                    }
-
                }.start()
-
            }
-
        }.start()
+    }
+    private fun openSettingsActivity(){
+        val intent = Intent(this, SettingActivity::class.java)
+        startActivity(intent)
+
+        
     }
 
 
